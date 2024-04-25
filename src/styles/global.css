@@ -16,18 +16,6 @@ body::before {
   z-index: 1;
 }
 
-ul > li {
-  position: relative;
-  padding: 0.1rem 0 0.1rem 1rem;
-}
-ul > li::before {
-  position: absolute;
-  left: 0;
-  display: inline-block;
-  content: "•";
-  color: #6366f1;
-}
-
 a[href]:hover {
   color: #6366f1;
 }
