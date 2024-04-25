@@ -104,6 +104,15 @@ const projects = [
   },
 ];
 
+const skills = {
+  Language: ["TS/JS", "Python", "Swift"],
+  "FE/App": ["React", "React-native", "Ios"],
+  BE: ["Express", "Nest.js", "FastAPI"],
+  DB: ["MongoDB", "Postgresql", "Mysql"],
+  Cloud: ["AWS", "GCP"],
+  DevOps: ["Docker", "Kubernetes"],
+};
+
 const BlueDotttedText = ({ children }: React.PropsWithChildren) => (
   <>
     {children}
@@ -185,7 +194,7 @@ const IndexPage: React.FC<PageProps> = () => {
           </li>
         </ul>
       </section>
-      <section>
+      <section className="mb-20 md:mb-32">
         <h2 className="text-5xl md:text-6xl mb-12 md:mb-16 font-medium">
           <BlueDotttedText>프로젝트</BlueDotttedText>
         </h2>
@@ -250,6 +259,26 @@ const IndexPage: React.FC<PageProps> = () => {
               </li>
             )
           )}
+        </ul>
+      </section>
+      <section>
+        <h2 className="text-5xl md:text-6xl mb-12 md:mb-16 font-medium">
+          <BlueDotttedText>기술</BlueDotttedText>
+        </h2>
+        <ul className="flex flex-wrap">
+          {Object.entries(skills).map(([category, skills]) => (
+            <li
+              className="p-3 basis-1/2 sm:basis-1/3 md:basis-1/4"
+              key={category}
+            >
+              <h3 className="text-3xl font-medium mb-2">{category}</h3>
+              <ul className="text-lg">
+                {skills.map((skill) => (
+                  <StyledListItem key={skill}>{skill}</StyledListItem>
+                ))}
+              </ul>
+            </li>
+          ))}
         </ul>
       </section>
     </main>
