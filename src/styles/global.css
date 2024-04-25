@@ -5,3 +5,34 @@
 body {
   font-family: "Noto Sans KR Variable";
 }
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  height: 0.5rem;
+  width: 100%;
+  background: #6366f1;
+  z-index: 1;
+}
+
+ul > li {
+  position: relative;
+  padding: 0.1rem 0 0.1rem 1rem;
+}
+ul > li::before {
+  position: absolute;
+  left: 0;
+  display: inline-block;
+  content: "•";
+  color: #6366f1;
+}
+
+a[href]:hover {
+  color: #6366f1;
+}
+
+a[href] img:hover {
+  filter: invert(39%) sepia(57%) saturate(1105%) hue-rotate(209deg)
+    brightness(95%) contrast(99%);
+}
