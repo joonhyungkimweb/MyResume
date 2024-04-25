@@ -56,4 +56,4 @@ const IndexPage: React.FC<PageProps> = () => {
 
 export default IndexPage;
 
-export const Head: HeadFC = () => <title>이력서 | 김준형</title>;
+export const Head: HeadFC = () => <title>이력서 - 김준형</title>;

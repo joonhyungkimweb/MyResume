@@ -1183,6 +1183,11 @@
     minimatch "^3.0.4"
     strip-json-comments "^3.1.1"
 
+"@fontsource-variable/noto-sans-kr@^5.0.6":
+  version "5.0.6"
+  resolved "https://registry.yarnpkg.com/@fontsource-variable/noto-sans-kr/-/noto-sans-kr-5.0.6.tgz#3dce5c576ea403832fc29942a4ab34cc5064d68f"
+  integrity sha512-BaSaI2Bxv0YQupgDYolxMWv8abe/XyxuWkyO0dtwY/yzDWHeToy2qK2vPqp347TTDdUlnj/Qs3NsPTfJwEZbiw==
+
 "@gatsbyjs/parcel-namer-relative-to-cwd@^2.13.1":
   version "2.13.1"
   resolved "https://registry.yarnpkg.com/@gatsbyjs/parcel-namer-relative-to-cwd/-/parcel-namer-relative-to-cwd-2.13.1.tgz#79d2692330a942394200c9bf3e820a4e55075ffb"
