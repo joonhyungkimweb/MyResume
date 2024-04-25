@@ -261,7 +261,7 @@ const IndexPage: React.FC<PageProps> = () => {
           )}
         </ul>
       </section>
-      <section>
+      <section className="mb-20 md:mb-32">
         <h2 className="text-5xl md:text-6xl mb-12 md:mb-16 font-medium">
           <BlueDotttedText>기술</BlueDotttedText>
         </h2>
@@ -271,14 +271,27 @@ const IndexPage: React.FC<PageProps> = () => {
               className="p-3 basis-1/2 sm:basis-1/3 md:basis-1/4"
               key={category}
             >
-              <h3 className="text-3xl font-medium mb-2">{category}</h3>
-              <ul className="text-lg">
+              <h3 className="text-2xl md:text-3xl font-medium mb-2">
+                {category}
+              </h3>
+              <ul className="text-xl">
                 {skills.map((skill) => (
                   <StyledListItem key={skill}>{skill}</StyledListItem>
                 ))}
               </ul>
             </li>
           ))}
+        </ul>
+      </section>
+      <section>
+        <h2 className="text-5xl md:text-6xl mb-12 md:mb-16 font-medium">
+          <BlueDotttedText>외국어 / 자격증</BlueDotttedText>
+        </h2>
+        <ul className="text-xl">
+          <StyledListItem>영어 : 중상(일상회화 가능)</StyledListItem>
+          <StyledListItem>일본어 : 상(고급 회화 가능)</StyledListItem>
+          <StyledListItem>JLPT N1</StyledListItem>
+          <StyledListItem>정보처리기사</StyledListItem>
         </ul>
       </section>
     </main>
