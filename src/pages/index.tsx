@@ -129,12 +129,15 @@ const skills = {
     "클라우드 환경에서 제품을 배포하는데에 익숙하며, 다양한 클라우드 공급자 환경에서 CI/CD를 구축할 수 있습니다.",
     "온프레미스와 클라우드 간, 혹은 서로 다른 클라우드 공급자 사이의 리소스를 이전하거나 각기 다른 환경을 통합해 아키텍처를 구축한 경험이 있습니다.",
   ],
-  Others: [
-    "Git을 사용한 버전 관리에 익숙하며 한 커밋 한 커밋이 일관된 작업 내용을 담도록 하는 데에 많은 노력을 기울입니다. patch 옵션을 애용하고, 필요하다면 공격적인 rebase로 히스토리를 바로잡습니다.",
-    "Jira, Notion 등 협업용 도구 사용에 익숙합니다.",
-    "문제 해결을 위해 가능한 모든 방법을 탐구하고 필요하다면 낯선 분야라도 적극적으로 탐색합니다.",
-    "더 많은 기술을 익히기 위해 몰두하는 것을 지양합니다. 익힌 기술로 현실의 문제에 도전하고 이를 해결했을 때 성장을 체감합니다.",
-  ],
+  Others: {
+    data: [
+      "Git을 사용한 버전 관리에 익숙하며 한 커밋 한 커밋이 일관된 작업 내용을 담도록 하는 데에 많은 노력을 기울입니다. patch 옵션을 애용하고, 필요하다면 공격적인 rebase로 히스토리를 바로잡습니다.",
+      "Jira, Notion 등 협업용 도구 사용에 익숙합니다.",
+      "문제 해결을 위해 가능한 모든 방법을 탐구하고 필요하다면 낯선 분야라도 적극적으로 탐색합니다.",
+      "더 많은 기술을 익히기 위해 몰두하는 것을 지양합니다. 익힌 기술로 현실의 문제에 도전하고 이를 해결했을 때 성장을 체감합니다.",
+    ],
+    easterEgg: "k8s와 i18n을 어떻게 읽는 줄 압니다.",
+  },
 };
 
 const BlueDotttedText = ({ children }: React.PropsWithChildren) => (
@@ -145,15 +148,22 @@ const BlueDotttedText = ({ children }: React.PropsWithChildren) => (
 );
 
 const beforeMinidot =
-  "before:content-['•'] before:absolute before:left-0 before:inline-block before:text-indigo-500 ";
+  "before:content-['•'] before:absolute before:left-0 before:inline-block before:text-indigo-500";
 
-const StyledListItem = ({ children }: React.PropsWithChildren) => (
-  <li className={`relative p-[.1rem_0_.1rem_1rem] ${beforeMinidot}`}>
+const StyledListItem = ({
+  children,
+  style,
+}: React.PropsWithChildren<React.LiHTMLAttributes<HTMLLIElement>>) => (
+  <li
+    className={`relative p-[.1rem_0_.1rem_1rem] ${beforeMinidot}`}
+    style={style}
+  >
     {children}
   </li>
 );
 
 const IndexPage: React.FC<PageProps> = () => {
+  const [easterEggShow, setEasterEggShow] = React.useState(false);
   return (
     <main className="py-24 max-w-[800px] px-5 mx-auto">
       <header className="flex flex-wrap gap-10 justify-center mb-20 md:mb-32">
@@ -293,14 +303,44 @@ const IndexPage: React.FC<PageProps> = () => {
               className="py-12 md:px-3 border-b last:border-b-0 last:pb-0 first:pt-0 md:py-16"
               key={category}
             >
-              <h3 className="text-3xl font-medium mb-2 md:text-4xl">
-                {category}
-              </h3>
-              <ul className="md:text-lg">
-                {skills.map((skill) => (
-                  <StyledListItem key={skill}>{skill}</StyledListItem>
-                ))}
-              </ul>
+              {Array.isArray(skills) ? (
+                <>
+                  <h3 className="text-3xl font-medium mb-2 md:text-4xl relative">
+                    {category}
+                  </h3>
+                  <ul className="md:text-lg">
+                    {skills.map((skill) => (
+                      <StyledListItem key={skill}>{skill}</StyledListItem>
+                    ))}
+                  </ul>
+                </>
+              ) : (
+                <>
+                  <h3 className="text-3xl font-medium mb-2 md:text-4xl relative">
+                    <button
+                      className="hover:text-indigo-950 cursor-default"
+                      onClick={() => setEasterEggShow((prev) => !prev)}
+                    >
+                      {category}
+                    </button>
+                  </h3>
+                  <ul className="md:text-lg transition-opacity">
+                    {skills.data.map((skill) => (
+                      <StyledListItem key={skill}>{skill}</StyledListItem>
+                    ))}
+                    <StyledListItem
+                      style={{
+                        textDecoration: "line-through",
+                        transitionProperty: "opacity",
+                        transitionDuration: "1000ms",
+                        opacity: +easterEggShow * 0.5,
+                      }}
+                    >
+                      {skills.easterEgg}
+                    </StyledListItem>
+                  </ul>
+                </>
+              )}
             </li>
           ))}
         </ul>
