@@ -195,26 +195,24 @@ const IndexPage: React.FC<PageProps> = () => {
               <p className="text-gray-500">Web Developer</p>
               <p className="text-gray-500">2020.11 ~ 2023.12 (3년 1개월)</p>
             </div>
-            <div className="basis-full md:basis-[calc(100%-22rem)]">
-              <ul className="md:text-lg">
-                <StyledListItem>
-                  회사 메인 프로덕트
-                  <span className="text-sm">(nocodingAI)</span>
-                  개발 담당
-                </StyledListItem>
-                <StyledListItem>
-                  AI 모델 추론 서버 Serverless 아키텍처 구축
-                </StyledListItem>
-                <StyledListItem>FE, BE CI/CD 파이프 라인 구축</StyledListItem>
-                <StyledListItem>
-                  인턴 및 신입 개발자 대상으로 개발 관련 스터디 진행
-                  <span className="text-sm block">(git, docker, JS)</span>
-                </StyledListItem>
-                <StyledListItem>
-                  기타 사내 프로젝트 및 외주업무 풀스택 개발
-                </StyledListItem>
-              </ul>
-            </div>
+            <ul className="basis-full md:basis-[calc(100%-22rem)] md:text-lg">
+              <StyledListItem>
+                회사 메인 프로덕트
+                <span className="text-sm">(nocodingAI)</span>
+                개발 담당
+              </StyledListItem>
+              <StyledListItem>
+                AI 모델 추론 서버 Serverless 아키텍처 구축
+              </StyledListItem>
+              <StyledListItem>FE, BE CI/CD 파이프 라인 구축</StyledListItem>
+              <StyledListItem>
+                인턴 및 신입 개발자 대상으로 개발 관련 스터디 진행
+                <span className="text-sm block">(git, docker, JS)</span>
+              </StyledListItem>
+              <StyledListItem>
+                기타 사내 프로젝트 및 외주업무 풀스택 개발
+              </StyledListItem>
+            </ul>
           </li>
         </ul>
       </section>
@@ -292,7 +290,7 @@ const IndexPage: React.FC<PageProps> = () => {
         <ul>
           {Object.entries(skills).map(([category, skills]) => (
             <li
-              className="py-12 px-3 border-b last:border-b-0 last:pb-0 first:pt-0 md:py-16"
+              className="py-12 md:px-3 border-b last:border-b-0 last:pb-0 first:pt-0 md:py-16"
               key={category}
             >
               <h3 className="text-3xl font-medium mb-2 md:text-4xl">
@@ -307,17 +305,32 @@ const IndexPage: React.FC<PageProps> = () => {
           ))}
         </ul>
       </section>
-      <section>
-        <h2 className="text-5xl md:text-6xl mb-12 md:mb-16 font-medium">
-          <BlueDotttedText>외국어 / 자격증</BlueDotttedText>
+      <section className="mb-20 md:mb-32">
+        <h2 className="text-5xl font-medium mb-12 md:text-6xl md:mb-16">
+          <BlueDotttedText>언어/자격</BlueDotttedText>
         </h2>
-        <ul className="text-xl">
-          <StyledListItem>영어 : 중상(일상회화 가능)</StyledListItem>
-          <StyledListItem>일본어 : 상(고급 회화 가능)</StyledListItem>
-          <StyledListItem>JLPT N1</StyledListItem>
-          <StyledListItem>정보처리기사</StyledListItem>
-        </ul>
+        <div className="flex flex-wrap justify-between md:px-3">
+          <div className="flex-0 basis-[calc(50%-.5rem)]">
+            <h3 className="text-3xl font-medium mb-2 md:text-4xl">외국어</h3>
+            <ul className="md:text-lg">
+              <StyledListItem>영어 : 일상 회화 가능</StyledListItem>
+              <StyledListItem>
+                일본어 : 고급 및 비지니스 회화 가능
+                <span className="text-xs">(JLPT N1)</span>
+              </StyledListItem>
+            </ul>
+          </div>
+          <div className="flex-0 basis-[calc(50%-.5rem)]">
+            <h3 className="text-3xl font-medium mb-2 md:text-4xl">자격증</h3>
+            <ul className="md:text-lg">
+              <StyledListItem>정보처리기사</StyledListItem>
+            </ul>
+          </div>
+        </div>
       </section>
+      <footer>
+        <p className="text-lg text-end text-gray-500">🙇‍♂️</p>
+      </footer>
     </main>
   );
 };
