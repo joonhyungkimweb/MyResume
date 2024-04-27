@@ -64,7 +64,7 @@ const projects = [
     end: "2023.8",
     link: "https://www.nomisqr.com/",
     details:
-      "생성형 AI 모델을 사용해QR 코드로 인식가능한 이미지를 생성하는 웹 플랫폼입니다.\n이미지 생성 API 서버 구축 및 웹 어플리케이션 BE 개발을 담당했습니다.\n이미지 생성의 경우 Stable diffusion 모델을 컨테이너화 시켜 사용했고 중계 서버를 두어 클라이언트단에 Stable Diffusion 추론 서버가 노출되지 않도록 구성했습니다. 중계 서버는 URL을 요청받아 QR 코드로 생성한 후, 미리 입력된 prompt 및 설정값과 함께 Stable Diffusion 추론 서버로 보내 생성된 이미지를 클라이언트로 반환합니다. 생성된 qr 이미지가 스캔이 되지 않는 경우도 있었기 때문에 생성된 QR 이미지를 중계서버에서 인식해보고 인식이 되지 않으면 Stable diffusion으로 이미지 재생성을 요청하는 방식으로 인식률을 보장했습니다.",
+      "생성형 AI 모델을 사용해QR 코드로 인식가능한 이미지를 생성하는 웹 플랫폼입니다.\n이미지 생성 API 서버 구축 및 웹 어플리케이션 BE 개발을 담당했습니다.\n이미지 생성의 경우 Stable Diffusion 모델을 컨테이너화 시켜 사용했고 중계 서버를 두어 클라이언트단에 추론 서버가 노출되지 않도록 구성했습니다. 중계 서버는 URL을 요청받아 QR 코드로 생성한 후, 미리 입력된 prompt 및 설정값과 함께 Stable Diffusion 추론 서버로 보내 생성된 이미지를 클라이언트로 반환합니다. 생성된 qr 이미지가 스캔이 되지 않는 경우도 있었기 때문에 생성된 QR 이미지를 중계서버에서 인식해보고 인식이 되지 않으면 Stable Diffusion에 이미지 재생성을 요청하는 방식으로 인식률을 보장했습니다.",
     stacks: "Python(fastAPI), Docker",
   },
   {
@@ -87,7 +87,7 @@ const projects = [
       android: "https://play.google.com/store/apps/details?id=com.readingwiz",
     },
     details:
-      " 어린이 영어 도서 독서 앱입니다. AI가 생성한 퀴즈를 통해 아동이 책 내용을 얼마나 이해했는지 평가합니다. webview 기반 크로스 플랫폼(Android/ios) 앱입니다.\nReact로 웹어플리케이션을 구축하고 Nest.js로 백엔드를 구축했습니다.\n구독 기능 구현 중 React Native in-app 결제 라이브러리가 결제 영수증 검증 기능에 deprecated app store API를 사용하고 있는 이슈가 있었습니다. 최신 버전에서도 해당 기능이 수정되지 않아 현행 API를 사용하기 DB에 저장해놓고 백엔드에서 영수증을 검증하도록 우회하여  해결했습니다.",
+      "어린이 영어 도서 독서 앱입니다. AI가 생성한 퀴즈를 통해 아동이 책 내용을 얼마나 이해했는지 평가합니다. webview 기반 크로스 플랫폼(Android/ios) 앱입니다.\nReact로 웹어플리케이션을 구축하고 Nest.js로 백엔드를 구축했습니다.\n구독 기능 구현 중 React Native in-app 결제 라이브러리가 결제 영수증 검증 기능에 deprecated된 app store API를 사용하고 있는 것을 확인했습니다. 최신 버전에서도 해당 기능이 수정되지 않아, 결제 완료 후 영수증을 DB에 저장해놓고 백엔드에서 현행 API를 사용하여 영수증을 검증하도록 구현하여 해결했습니다.",
     stacks: "Typescript(React, nest.js), Postgresql, Docker, react native",
   },
   {
@@ -99,14 +99,14 @@ const projects = [
       ios: "https://apps.apple.com/kr/app/nfc-wifi-connector/id6496284170",
     },
     details:
-      "NFC에 기록된 wifi 정보를 스캔하여 wifi에 자동으로 연결하는 IOS 앱입니다.\napplication/vnd.wfa.wsc mime type 데이터가 기록된 NFC 태그를 안드로이드 기기에서 스캔하면 해당 wifi 정보를 사용해 자동으로 wifi에 연결되지만 IOS는 해당 기능을 제공하지 않습니다. IOS 기기에서도 wifi 정보가 기록된 NFC를 사용해 wifi에 연결할 수 있도록 만든 토이프로젝트 앱입니다.",
+      "NFC에 기록된 Wifi 정보를 스캔하여 Wifi에 자동으로 연결하는 IOS 앱입니다.\nmime type application/vnd.wfa.wsc 데이터가 기록된 NFC 태그를 Android 기기에서 스캔하면 해당 Wifi 정보를 사용해 자동으로 wifi에 연결되지만 IOS는 해당 기능을 제공하지 않습니다. IOS 기기에서도 wifi 정보가 기록된 NFC를 사용해 wifi에 연결할 수 있도록 만든 토이프로젝트 앱입니다.",
     stacks: "Swift(SwiftUI)",
   },
 ];
 
 const skills = {
   Programming: [
-    "사용하는 언어의 Idiom과 탐구하고 convention을 준수하는 것을 즐깁니다.",
+    "사용하는 언어의 Idiom과 탐구하고 Convention을 준수하는 것을 즐깁니다.",
     "함수형과 객체 지향 패러다임을 이해하고 적재적소에 사용합니다.",
     "Javascript/Typescript에 능숙합니다. Typescript의 타입 조작 키워드를 사용하여 TS가 타입 추론을 잘 할 수 있게 격려합니다.",
     "Python의 방대한 AI 관련 생태계를 활용하고 환경을 구성하는데에 익숙합니다.",
