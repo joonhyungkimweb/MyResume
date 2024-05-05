@@ -4,9 +4,9 @@
         "team": "에이아이노미스",
         "start": "2020.11",
         "end": "2022.1",
-        "link": "https://pro.nocodingai.com",
+        "link": "https://app.nocodingai.com",
         "details": "블록 코딩으로 딥러닝 AI 모델을 훈련시키는 웹 플랫폼입니다.\n초기 MVP 버전부터 풀스택으로 개발에 참여하였고 프론트엔드는 Vue, Backend는 AWS Lambda를 이용해 Serverless로 구성하였습니다.\n프로덕트의 핵심기능인 AI 모델 훈련 기능 및 데이터 전처리 기능의 경우 Tensorflow.js의 기능을 블록코딩 형태의 GUI 모듈로 프론트엔드에 이식하여 구현하였습니다. 딥러닝 모델 훈련 프로세스 중 모델 아키텍처 구성과 데이터 전처리 기능에서는 블록이 일렬구조가 아닌 복잡한 형태의 그래프로 실행되어야 했는데, 각 블록 들의 실행 순서를 보장하기 위해 그래프 탐색 알고리즘을 적용하였습니다. Tensorflow.js의 모델 훈련 기능은 WebGL을 사용하나 브라우저 상에서 GPU 자원 사용이 원활하지 못한 문제가 있어 매 훈련 단계마다 사용하지 않는 GPU 메모리를 해제하고 훈련 데이터를 쪼개어 훈련할 수 있도록 최적화하였습니다.",
-        "stacks": "Typescript(react, express), Python, Postgresql, Kubernetes, Docker, AWS(ECS, Lambda, RDS), GCP(GKE)"
+        "stacks": "Javascript, Vue, AWS(Lambda, API Gateway, Amplify, DynamoDB)"
     },
     {
         "title": "NocodingAI\n리뉴얼",
