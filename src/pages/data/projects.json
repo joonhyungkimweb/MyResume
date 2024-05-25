@@ -23,7 +23,7 @@
         "start": "2021.11",
         "end": "2022.1",
         "link": "https://soynet.io",
-        "details": "인공지능 실행 가속기 스타트업인 Soynet의 브랜드 페이지 작업입니다.\nVue로 FE를 구축했고 AWS lambda를 이용한 serverless API로 BE를 구성했습니다.\n회사 소개 페이지 및 마크다운 기반의 Model market, Blog 기능을 serverless architecture로 구현했습니다. 대부분의 자원을 AWS 서비스를 사용해 구축한 프로젝트입니다. Serveless architecture로 구성되어 서버 관리에 대한 부담을 줄일 수 있었고, AWS 서비스간의 연결 및 권한 설정을 위해 IAM Role 및 Policy 설정을 통해 서비스간의 연결을 보안을 향상 시켰습니다.",
+        "details": "인공지능 실행 가속기 스타트업인 Soynet의 브랜드 페이지 작업입니다.\nVue로 FE를 구축했고 AWS lambda를 이용한 serverless API로 BE를 구성했습니다.\n회사 소개 페이지 및 마크다운 기반의 Model market, Blog 기능을 serverless architecture로 구현했습니다. 대부분의 자원을 AWS 서비스를 사용해 구축한 프로젝트입니다. Serveless architecture로 구성되어 서버 관리에 대한 부담을 줄일 수 있었고, AWS 서비스간의 연결 및 권한 설정을 위해 IAM Role 및 Policy 설정을 통해 서비스간의 연결성과 보안을 향상 시켰습니다.",
         "stacks": "Javascript(Vue), AWS(Lambda, DynamoDB, API Gateway)"
     },
     {
