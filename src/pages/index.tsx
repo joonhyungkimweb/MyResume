@@ -1,6 +1,6 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
-import Profile from "../images/profile.jpeg";
+import Profile from "../images/profile.jpg";
 import LinkedIn from "../images/icons/linkedin.svg";
 import Github from "../images/icons/github.svg";
 import Email from "../images/icons/email.svg";
